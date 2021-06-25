@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MultiSelect or check box</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form method="POST" action="{% url 'resp' %}">
+          {% csrf_token %}
+            <h1>Checkboxes</h1>
+            Hobbies:<br>
+            <label for="cric">Cricket</label>
+            <input type="checkbox" name="hobby" id="cric" value="Cricket">
+            <label for="volly">Volley Ball</label>
+            <input type="checkbox" name="hobby" id="volley" value="Volley Ball">
+            <label for="swim">Swimming</label>
+            <input type="checkbox" name="hobby" id="swim" value="Swimming">
+            <label for="cook">Cooking</label>
+            <input type="checkbox" name="hobby" id="cook" value="Cooking">
+            <br><br>
+            <h1>MultiSelect</h1>
+            <label for="fav">Fav Food :</label>
+            <select name="fav" id="fav" multiple>
+              <option value="momoes">Momoes</option>
+              <option value="pizza">Pizza</option>
+              <option value="dahipuri">Dahipuri</option>
+              <option value="briyani">Briyani</option>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
